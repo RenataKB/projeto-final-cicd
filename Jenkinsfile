@@ -5,7 +5,7 @@ pipeline {
             steps {
               git (
                 branch: 'main',
-                url: 'git@github.com:RenataKB/projeto-final-cicd.git'
+                url: 'https://github.com/RenataKB/projeto-final-cicd.git'
               )
             }
         }
