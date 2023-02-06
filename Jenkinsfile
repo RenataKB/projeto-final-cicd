@@ -1,5 +1,8 @@
 pipeline {
     agent {label 'noprojeto'}
+    options {
+        ansiColor('xterm')
+    }
     stages {
         stage('Clone repository') { 
             steps {
@@ -34,13 +37,18 @@ pipeline {
                 }
             }
         }
-        stage('Push') {
-            steps {
-                script{
+//         stage('Push') {
+//             steps {
+//                 script{
 //                        docker.withRegistry('', 'docker') {
-                       image.push()
+//                        image.push()
 //                     }
-                }
+//                 }
+//             }
+//         }
+        stage('Not Push') {
+            steps {
+                echo '\033[34mSorry!\033[0m \033[33mI am not creating\033[0m \033[35ma DockerHub account!\033[0m'
             }
         }
     }
