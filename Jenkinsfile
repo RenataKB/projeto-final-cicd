@@ -39,7 +39,7 @@ pipeline {
                 script{
 //                        docker.withRegistry('', 'docker') {
                        image.push()
-                    }
+//                     }
                 }
             }
         }
