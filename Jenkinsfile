@@ -40,7 +40,7 @@ pipeline {
         stage('Push') {
             steps {
                 script{
-                       docker.withRegistry('https://hub.docker.com/', 'dockerhub') {
+                       docker.withRegistry('', 'dockerhub') {
                        image.push()
                     }
                 }
