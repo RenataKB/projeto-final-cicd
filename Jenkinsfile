@@ -22,7 +22,7 @@ pipeline {
             }
             steps { 
                 script{
-                 image = docker.build("grupo2/v1:develop")
+                 image = docker.build("helenpedroso/v1:develop")
                  
                 }
             }
@@ -33,7 +33,7 @@ pipeline {
             } 
             steps { 
                 script{
-                 image = docker.build("grupo2/v1:main")
+                 image = docker.build("helenpedroso/v1:main")
                 }
             }
         }
@@ -55,7 +55,7 @@ pipeline {
 //         stage('Deploy') {
 //             steps {
 //                  script {
-//                     docker.image("grupo2/v1:main").withRun('-p 3000:3000') {c ->
+//                     docker.image("helenpedroso/v1:main").withRun('-p 3000:3000') {c ->
 //                         sleep 60
 //                     }
 //                 }
