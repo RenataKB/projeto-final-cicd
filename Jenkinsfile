@@ -56,7 +56,7 @@ pipeline {
             steps {
                  script {
                     docker.image('grupo2/v1:main').withRun('-p 3000:3000') {c ->
-                        sleep 300
+                        sleep 100
                     }
                 }
             }
