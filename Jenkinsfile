@@ -22,7 +22,7 @@ pipeline {
             }
             steps { 
                 script{
-                 image = docker.build("helenpedroso/v1:develop")
+                 image = docker.build("helenpedroso/grupo2:develop")
                  
                 }
             }
@@ -33,14 +33,14 @@ pipeline {
             } 
             steps { 
                 script{
-                 image = docker.build("helenpedroso/v1:main")
+                 image = docker.build("helenpedroso/grupo2:main")
                 }
             }
         }
         stage('Push') {
             steps {
                 script{
-                       docker.withRegistry('dockerhub.com', 'dockerhub') {
+                       docker.withRegistry('', 'dockerhub') {
                        image.push()
                     }
                 }
