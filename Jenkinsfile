@@ -55,7 +55,7 @@ pipeline {
         stage('Deploy') {
             steps {
                  script {
-                    docker.image('grupo2/v1:main').withRun('--name meuapp -p 3000:3000 -d') {c ->
+                    meuapp = docker.image('grupo2/v1:main').withRun('--name meuapp -p 3000:3000') {c ->
                         sleep 100
                     }
                 }
